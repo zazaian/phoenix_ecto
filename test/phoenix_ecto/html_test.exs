@@ -4,6 +4,7 @@ defmodule PhoenixEcto.HTMLTest do
   import Ecto.Changeset
   import Phoenix.HTML
   import Phoenix.HTML.Form
+  import Phoenix.HTML.FormData, only: [input_value: 3]
 
   defp safe_form_for(changeset, opts \\ [], function) do
     safe_to_string(form_for(changeset, "/", opts, function))
